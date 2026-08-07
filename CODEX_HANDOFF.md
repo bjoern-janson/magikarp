@@ -8,6 +8,8 @@ Build the smallest benchmark capable of falsifying the claim:
 
 Do not implement the entire conceptual framework.
 
+Before an evidence-bearing run, follow [`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md). It freezes the remaining execution choices, validity gates, revision-trace requirements, and result-status vocabulary without changing the v0.1 hypothesis.
+
 ## First implementation target
 
 Create a synthetic task family with three controlled failure depths:
@@ -61,6 +63,8 @@ Record:
 - preservation,
 - revision cost.
 
+Also preserve the complete revision trace so diagnostic quality, revision selection, and execution success remain separable.
+
 ## Required comparisons
 
 Baseline predictor:
@@ -89,6 +93,7 @@ Start with straightforward predictive models and cross-validation before informa
 - Preserve negative results.
 - Do not collapse outcomes into one score prematurely.
 - Do not use future outcome information to tune the SD definition.
+- Do not interpret a result until the execution-preflight validity gates pass.
 
 ## Minimal repo structure Codex can create
 
@@ -116,9 +121,11 @@ A single command should:
 3. compute `Q`, `E`, baseline adaptation measures, and pre-adaptation `SD`,
 4. run held-out adaptation trials,
 5. emit decomposed `Y_adapt`,
-6. fit/evaluate `M0` and `M1`,
-7. report held-out predictive delta with uncertainty,
-8. save configs and raw-enough artifacts to reproduce the result.
+6. preserve revision traces and selected revision depth,
+7. fit/evaluate `M0` and `M1`,
+8. report held-out predictive delta with uncertainty,
+9. save configs and raw-enough artifacts to reproduce the result,
+10. emit the benchmark-validity gates and one explicit run status.
 
 ## What not to do yet
 
