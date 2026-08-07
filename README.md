@@ -152,6 +152,7 @@ The v0.1 benchmark should first establish whether SD is measurable and independe
 - [`docs/BENCHMARK_DESIGN.md`](docs/BENCHMARK_DESIGN.md) — concrete minimal synthetic benchmark design.
 - [`docs/MEASUREMENT_PLAN.md`](docs/MEASUREMENT_PLAN.md) — predictor/outcome separation, baselines, evaluation, and leakage controls.
 - [`docs/REVISION_CONTROLLER_CLARIFICATION.md`](docs/REVISION_CONTROLLER_CLARIFICATION.md) — post-freeze clarification separating diagnosis, revision selection, and execution without amending the v0.1 hypothesis.
+- [`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md) — pre-outcome execution freeze: operational metrics, validity gates, run manifest, artifact schema, and result-status rules.
 - [`docs/REPRESENTATIONAL_GOVERNANCE.md`](docs/REPRESENTATIONAL_GOVERNANCE.md) — public-facing umbrella problem.
 - [`docs/CARP.md`](docs/CARP.md) — frozen Controlled Adaptation Reasoning Protocol and its role.
 - [`docs/CONCEPTUAL_LINEAGE.md`](docs/CONCEPTUAL_LINEAGE.md) — how the research narrowed to the current wager.
@@ -166,6 +167,7 @@ The v0.1 benchmark should first establish whether SD is measurable and independe
 
 **Conceptual stack: frozen.**  
 **v0.1 hypothesis: frozen.**  
+**Execution preflight: frozen before evidence-bearing implementation.**  
 **Implementation: next.**  
 **Evidence: not yet sufficient to claim SD is a distinct predictive construct.**
 
