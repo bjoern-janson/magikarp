@@ -116,6 +116,8 @@ Two symmetric pathologies should fail:
 - **rigidity / under-revision:** deep failure receives a shallow patch;
 - **hyperplasticity / over-revision:** local failure triggers unnecessary restructuring.
 
+A post-freeze clarification separates the diagnostic output, the revision depth actually selected, and the eventual adaptation outcome so these failure transitions are not collapsed into one variable.
+
 ## Temporal and data firewall
 
 The benchmark must enforce:
@@ -149,6 +151,7 @@ The v0.1 benchmark should first establish whether SD is measurable and independe
 - [`docs/MAGIKARP_V0_1_BENCHMARK_CONTRACT.md`](docs/MAGIKARP_V0_1_BENCHMARK_CONTRACT.md) — frozen preregisterable benchmark contract.
 - [`docs/BENCHMARK_DESIGN.md`](docs/BENCHMARK_DESIGN.md) — concrete minimal synthetic benchmark design.
 - [`docs/MEASUREMENT_PLAN.md`](docs/MEASUREMENT_PLAN.md) — predictor/outcome separation, baselines, evaluation, and leakage controls.
+- [`docs/REVISION_CONTROLLER_CLARIFICATION.md`](docs/REVISION_CONTROLLER_CLARIFICATION.md) — post-freeze clarification separating diagnosis, revision selection, and execution without amending the v0.1 hypothesis.
 - [`docs/REPRESENTATIONAL_GOVERNANCE.md`](docs/REPRESENTATIONAL_GOVERNANCE.md) — public-facing umbrella problem.
 - [`docs/CARP.md`](docs/CARP.md) — frozen Controlled Adaptation Reasoning Protocol and its role.
 - [`docs/CONCEPTUAL_LINEAGE.md`](docs/CONCEPTUAL_LINEAGE.md) — how the research narrowed to the current wager.
