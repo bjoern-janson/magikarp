@@ -1,7 +1,7 @@
 # MAGIKARP v0.1 — Execution Preflight
 
 **Status:** post-freeze execution governance for the frozen v0.1 hypothesis.  
-**Authority:** implementation and result-interpretation rules only; this document does not expand the conceptual ontology or change the primary research claim.
+**Authority:** implementation and result-interpretation rules only; this document does not expand the conceptual ontology or change the primary research claim. Evidence eligibility and top-level outcome authority are governed by [`../EVIDENCE-RUN-PROTOCOL-v0.1.md`](../EVIDENCE-RUN-PROTOCOL-v0.1.md).
 
 ## Purpose
 
@@ -332,8 +332,10 @@ Before the first evidence-bearing run, commit a machine-readable manifest contai
 - primary and secondary outcome definitions;
 - model family and preprocessing;
 - uncertainty procedure;
-- validity-gate outputs;
+- validity-gate **definitions and thresholds**;
 - any deviations from this preflight and their pre-outcome rationale.
+
+Validity-gate **outcomes** are post-execution observations and must be written to the immutable result artifacts rather than inserted into the pre-outcome manifest.
 
 ### Stage 3 — evidence-bearing run
 
@@ -382,15 +384,14 @@ Compact frozen summaries may later be committed even if raw local outputs remain
 
 ## 13. Result status vocabulary
 
-Every run should receive exactly one status:
+Every run should receive exactly one top-level status:
 
 - `engineering_only` — implementation/smoke run, not evidence-bearing;
-- `benchmark_invalid` — one or more validity gates failed;
-- `valid_negative` — valid benchmark, no held-out predictive gain from `SD`;
-- `valid_positive` — valid benchmark, preregistered held-out predictive gain from `SD`;
-- `valid_mixed` — valid benchmark, effect materially depends on failure class or another preregistered subgroup.
+- `benchmark_invalid` — one or more validity, provenance, attestation, compatibility, or frozen-run conditions failed;
+- `valid_negative` — valid evidence run that does not meet the frozen positive rule;
+- `valid_positive` — valid evidence run that meets the frozen positive rule.
 
-A null or mixed result is not an implementation failure.
+A null is not an implementation failure. Material failure-class or preregistered subgroup heterogeneity is reported as a **secondary diagnostic** under the frozen overall positive/null classification; it does not create or replace a top-level evidence status.
 
 ---
 
