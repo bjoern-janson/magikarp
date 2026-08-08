@@ -27,7 +27,7 @@ An integration team may inspect the full repository. Read in this order:
 7. `src/magikarp/`
 8. `tests/`
 
-Treat `CODEX_HANDOFF.md` as historical implementation context. The first synthetic implementation target described there is complete.
+The completed first synthetic-implementation brief is preserved at [`archive/CODEX_HANDOFF_INITIAL.md`](archive/CODEX_HANDOFF_INITIAL.md) for historical context only.
 
 ## 3. Read boundary for an independent generator team
 
