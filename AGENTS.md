@@ -1,128 +1,98 @@
 # AGENTS.md
 
-This repository is preparing **MAGIKARP v0.1**, a deliberately minimal benchmark. Coding agents should optimize for experimental discriminability, not theoretical expansion.
+MAGIKARP v0.1 is at an **engineering freeze**. Coding agents should preserve the frozen scientific contract and optimize for experimental discriminability, not theoretical expansion.
 
-An executable synthetic loop now exists under `src/magikarp`. Preserve its
-diagnosis → revision → outcome separation and run both of these checks after
-implementation changes:
+## Start here
+
+Before making project changes, read:
+
+1. [`PROJECT_FREEZE.md`](PROJECT_FREEZE.md)
+2. [`CONTINUATION.md`](CONTINUATION.md)
+3. [`docs/MAGIKARP_V0_1_BENCHMARK_CONTRACT.md`](docs/MAGIKARP_V0_1_BENCHMARK_CONTRACT.md)
+4. [`EVIDENCE-RUN-PROTOCOL-v0.1.md`](EVIDENCE-RUN-PROTOCOL-v0.1.md)
+5. [`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md)
+
+`CODEX_HANDOFF.md` now routes to the current continuation package. The original first-implementation brief is archived.
+
+## Current project boundary
+
+The built-in deterministic loop under `src/magikarp` is an engineering reference. It is fixed at `L0`, and no metadata, wrapper, seed variation, or attestation can make it evidence-bearing.
+
+The next scientific step is **not** more built-in benchmark polish. It is a genuinely independent `L2` or `L3` evidence source.
+
+Do not build a generic external-generator framework before a real independent source exists. Once a source is frozen, implement only the minimum adapter required to execute it without changing the frozen scientific meaning.
+
+## Non-negotiable v0.1 scope
+
+The load-bearing objects remain only:
+
+- `Q` — present competence;
+- `SD` — prospective pre-adaptation failure-depth diagnosis;
+- `F` — experimenter-controlled failure depth;
+- `Y_adapt` — decomposed held-out adaptation outcomes.
+
+Primary comparison:
+
+```text
+M0: R_c ~ Q + A + E
+M1: R_c ~ Q + A + E + SD
+```
+
+The claim is predictive, not causal.
+
+Do **not** make representation invention, CRE, escape topology, authority capture, transformation topology, Gyarados failure, CARP, or recursive improvement required v0.1 implementation objects.
+
+Selection among the supplied parameter/model/interface revision classes is not representation invention.
+
+## Empirical separation to preserve
+
+Keep these objects distinct in code and artifacts:
+
+```text
+F -> q_SD -> D_revision -> Y_adapt
+```
+
+Do not infer diagnosis from revision choice. Do not infer diagnosis or revision choice from recovery.
+
+`SD` must be computed before unrestricted adaptation and without later outcome information.
+
+Keep recovery, transfer, retention, preservation, and correction cost decomposed. Do not create a universal MAGIKARP score.
+
+## Evidence discipline
+
+- Prediction is not causation.
+- Reproducibility is not structural independence.
+- Generator buckets are not structural families.
+- A valid null is retained evidence.
+- A failed validity/provenance/freeze condition is `benchmark_invalid`, not a negative result.
+- Per-failure heterogeneity is secondary; it is not a third top-level evidence status.
+- Do not rescue a null by changing definitions, endpoints, seeds, exclusions, or stopping rules after outcome inspection.
+
+Before an evidence-bearing run, follow the exact evidence protocol, freeze the manifest, and obtain a separate independent pre-outcome attestation.
+
+## Independent-source firewall
+
+If a separate team is intended to author an `L2` generator, direct them to [`docs/INDEPENDENT_GENERATOR_BRIEF-v0.1.md`](docs/INDEPENDENT_GENERATOR_BRIEF-v0.1.md) rather than the implementation.
+
+Do not unnecessarily expose generator authors to:
+
+- `src/magikarp/`;
+- built-in signal prototypes;
+- built-in outcome equations;
+- tests encoding those mechanisms;
+- prior evidence outcomes or failed evidence runs.
+
+If access has occurred, disclose it rather than overstating independence.
+
+## Validation after implementation changes
+
+Run:
 
 ```text
 python -m unittest discover -s tests -v
 magikarp smoke --output results/smoke --overwrite
 ```
 
-A valid smoke result is engineering-only; a failed gate makes it benchmark-invalid.
-Never relabel a smoke result as evidence.
+A healthy smoke run remains `engineering_only`. Passing gates validates the engineering loop, not the scientific hypothesis.
 
-Before any evidence-bearing run, follow both
-[`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md) and the
-normative [`EVIDENCE-RUN-PROTOCOL-v0.1.md`](EVIDENCE-RUN-PROTOCOL-v0.1.md).
-Smoke runs may debug implementation, but no result should be interpreted until
-the preflight validity gates pass, the run manifest is frozen, and the separate
-independent attestation is valid. The built-in generator is fixed at `L0` and
-cannot become evidence-bearing through configuration or metadata changes.
-
-## Non-negotiable scope
-
-The load-bearing v0.1 objects are only:
-
-- `Q`: present competence.
-- `SD`: pre-adaptation representation self-diagnosis.
-- `F`: experimenter-controlled failure depth.
-- `Y_adapt`: held-out adaptation outcomes.
-
-Do **not** make escape topology, authority capture, provenance, transformation topology, Gyarados failure, or CARP required implementation objects unless a concrete benchmark need forces them in.
-
-The post-freeze revision-controller clarification may require recording `q_SD`, revision traces, and selected revision depth, but these are implementation/analysis surfaces rather than new load-bearing v0.1 ontology.
-
-## Primary hypothesis
-
-Adding pre-adaptation `SD` should improve held-out prediction of later adaptation outcomes beyond strong baselines:
-
-- present competence,
-- ordinary error sensitivity,
-- standard adaptation metrics.
-
-Primary comparison:
-
-- `M0: Y ~ Q + A + E`
-- `M1: Y ~ Q + A + E + SD`
-
-The primary success criterion is reproducible out-of-sample predictive gain.
-
-## Predictor/outcome firewall
-
-`SD` must be computed before unrestricted adaptation and without access to outcome information.
-
-Diagnostic probes and held-out adaptation tasks must not leak via:
-
-- shared templates,
-- near-duplicate instances,
-- generator fingerprints,
-- hidden labels,
-- memorized failure signatures,
-- adaptation trajectories used during SD scoring.
-
-## Failure classes
-
-Ground truth:
-
-- `parameter`
-- `model`
-- `interface`
-
-The benchmark should make the correct revision depth identifiable by construction.
-
-## Outcome handling
-
-Keep the adaptation vector decomposed:
-
-- recovery,
-- transfer,
-- retention,
-- preservation,
-- correction/revision cost.
-
-Do not invent a universal scalar MAGIKARP score in v0.1.
-
-## Engineering priorities
-
-1. Deterministic seeds and reproducible dataset generation.
-2. Explicit train/diagnostic/adaptation/transfer splits.
-3. Strong assertions against leakage.
-4. Small synthetic environments with known ground-truth failure type.
-5. Baselines that can fail in both directions:
-   - rigid/shallow updater,
-   - hyperplastic/deep updater,
-   - sensible adaptive baseline.
-6. Machine-readable run artifacts.
-7. Tests for all benchmark invariants before large experiments.
-8. Frozen evidence-run manifest and explicit run status.
-
-## Scientific discipline
-
-- Prediction is not causation.
-- A positive correlation is not enough.
-- In-sample improvement is not enough.
-- A significant coefficient is not enough.
-- If SD adds no held-out predictive value, report the negative result.
-- Do not rescue a null result by expanding definitions.
-- Avoid explanation after the fact unless it produces a new discriminating test.
-- A failed benchmark-validity gate means `benchmark_invalid`, not evidence against MAGIKARP.
-
-## CARP
-
-CARP is a candidate intervention, not the definition of MAGIKARP success. Do not bake CARP compliance into labels or scoring.
-
-## Preferred first milestone
-
-A tiny end-to-end benchmark where:
-
-1. two or more agent classes achieve similar baseline `Q`,
-2. diagnostic probes yield distinct `SD`,
-3. held-out failures are introduced,
-4. `SD` is tested prospectively against later adaptation trajectories,
-5. a no-SD baseline model is compared against an SD-augmented model,
-6. diagnostic output, revision choice, and adaptation outcome remain separately recorded,
-7. benchmark-validity gates are machine-readable,
-8. all results are reproducible from a single command.
+If a change alters what is generated, measured, excluded, grouped, stopped, analyzed, or claimed, apply the scientific-versioning rule in `EVIDENCE-RUN-PROTOCOL-v0.1.md` rather than silently preserving the v0.1 identity.
