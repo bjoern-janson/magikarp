@@ -8,7 +8,7 @@ Build the smallest benchmark capable of falsifying the claim:
 
 Do not implement the entire conceptual framework.
 
-Before an evidence-bearing run, follow [`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md). It freezes the remaining execution choices, validity gates, revision-trace requirements, and result-status vocabulary without changing the v0.1 hypothesis.
+Before an evidence-bearing run, follow [`../docs/V0_1_EXECUTION_PREFLIGHT.md`](../docs/V0_1_EXECUTION_PREFLIGHT.md). It freezes the remaining execution choices, validity gates, revision-trace requirements, and result-status vocabulary without changing the v0.1 hypothesis.
 
 ## First implementation target
 

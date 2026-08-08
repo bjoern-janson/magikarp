@@ -1,0 +1,50 @@
+{
+  "benchmark_version": "MAGIKARP-v0.1",
+  "evidence_protocol_version": "0.1",
+  "freeze_package_date": "2026-08-08",
+  "snapshot_base_commit": "57d3c526ee930a525f0dff39c162aa2c68863abb",
+  "scientific_state": {
+    "conceptual_stack": "frozen",
+    "primary_hypothesis": "frozen",
+    "claim_type": "prospective_predictive",
+    "primary_comparison": {
+      "M0": "R_c ~ Q + A + E",
+      "M1": "R_c ~ Q + A + E + SD"
+    }
+  },
+  "engineering_state": {
+    "implementation": "deterministic_builtin_synthetic_loop",
+    "builtin_generator": "builtin_latent_context_v0.1",
+    "builtin_independence_level": "L0",
+    "builtin_evidence_ready": false,
+    "builtin_evidence_bearing": false,
+    "validity_gates": ["A", "B", "C", "D", "E", "F"],
+    "external_generator_execution_adapter": false,
+    "external_evidence_schema_and_eligibility_validator": true
+  },
+  "evidence_state": {
+    "qualifying_L2_generators": 0,
+    "qualifying_L3_generators": 0,
+    "evidence_bearing_runs": 0,
+    "empirical_positive_claim": false,
+    "empirical_negative_claim": false
+  },
+  "next_authorized_sequence": [
+    "obtain independent L2 or L3 source",
+    "freeze generator provenance",
+    "build minimum source-specific adapter",
+    "freeze manifest",
+    "obtain independent pre-outcome attestation",
+    "execute one frozen run",
+    "retain valid_positive, valid_negative, or benchmark_invalid outcome"
+  ],
+  "prohibited_shortcuts": [
+    "promote builtin generator through metadata",
+    "treat generator buckets as structural independence",
+    "build generic plugin architecture before a real independent source exists",
+    "tune v0.1 after outcome inspection",
+    "describe supplied interface expansion as representation invention",
+    "promote per-failure heterogeneity to a top-level evidence status"
+  ],
+  "continuation_entrypoint": "CONTINUATION.md"
+}

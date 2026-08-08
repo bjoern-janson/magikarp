@@ -12,6 +12,7 @@ from magikarp.config import (
     smoke_config,
     validate_config,
 )
+from magikarp.eligibility import manifest_hash
 from magikarp.manifest import (
     build_manifest,
     load_manifest,
@@ -116,9 +117,13 @@ class ManifestTests(unittest.TestCase):
     def test_evidence_manifest_rejects_unfrozen_and_mismatched_config(self) -> None:
         config = evidence_config()
         manifest = build_manifest(config, Path(__file__).resolve().parents[1])
-        self.assertFalse(manifest["frozen"])
+
+        unfrozen = copy.deepcopy(manifest)
+        unfrozen["frozen"] = False
+        unfrozen["git"]["dirty"] = True
+        unfrozen["manifest_hash"] = manifest_hash(unfrozen)
         with self.assertRaisesRegex(ValueError, "not frozen"):
-            validate_frozen_manifest(manifest, config)
+            validate_frozen_manifest(unfrozen, config)
 
         changed = copy.deepcopy(config)
         changed["sample_counts"]["agents_per_family"] += 1
