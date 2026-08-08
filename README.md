@@ -179,8 +179,7 @@ Supporting context:
 Coding-agent guidance:
 
 - [`AGENTS.md`](AGENTS.md)
-- [`CODEX_HANDOFF.md`](CODEX_HANDOFF.md) — current routing file;
-- [`archive/CODEX_HANDOFF_INITIAL.md`](archive/CODEX_HANDOFF_INITIAL.md) — completed initial implementation brief.
+- [`archive/CODEX_HANDOFF_INITIAL.md`](archive/CODEX_HANDOFF_INITIAL.md) — completed initial implementation brief, retained for historical context only.
 
 Archived application/assessment context is non-evidential.
 
