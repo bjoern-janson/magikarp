@@ -239,6 +239,10 @@ Supporting context:
 - [`docs/CONCEPTUAL_RESERVE.md`](docs/CONCEPTUAL_RESERVE.md)
 - [`docs/GLOSSARY.md`](docs/GLOSSARY.md)
 
+Future research context — non-normative for MAGIKARP v0.1:
+
+- [`docs/CRE_INTRODUCTION.md`](docs/CRE_INTRODUCTION.md) — introductory guide to Controlled Representational Escape and the authority-governance problem beyond supplied correction actions.
+
 Coding-agent guidance:
 
 - [`AGENTS.md`](AGENTS.md)
