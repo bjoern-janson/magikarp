@@ -1,0 +1,24 @@
+{
+  "creators": [
+    {
+      "name": "bjarki",
+      "type": "ProjectMember"
+    }
+  ],
+  "title": "MAGIKARP v0.1 — Prospective Failure-Depth Diagnosis Benchmark",
+  "version": "0.1",
+  "description": "MAGIKARP v0.1 is a deterministic synthetic research benchmark for testing whether prospective failure-depth diagnosis adds held-out predictive information about later recovery beyond present competence, ordinary error sensitivity, and a frozen standard-adaptation control. The built-in generator is explicitly engineering-only (L0) and does not constitute evidence for the scientific hypothesis, representation invention, Controlled Representational Escape, causal efficacy, or general intelligence. This release freezes the measurement instrument, evidence-governance protocol, validity gates, provenance and attestation machinery, and successor-team handoff at the point before any qualifying L2/L3 evidence source exists.",
+  "access_right": "open",
+  "keywords": [
+    "adaptive reasoning",
+    "benchmark",
+    "representation limits",
+    "failure-depth diagnosis",
+    "held-out prediction",
+    "correctability",
+    "scientific software"
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "language": "eng"
+}
