@@ -47,9 +47,9 @@ This is a conceptual and governance framework. It is not yet a demonstrated gene
 
 #### 2. Negative-Space Search (NSS) — do not expand when the representation is already adequate
 
-NSS turns one part of that concern into a concrete search policy. Given an observed signature, it checks whether available cases with that signature disagree in their trusted labels. If there is no observed collision, it does not launch expensive generic synthesis. If there is a collision, it expands the representation or search space.
+NSS turns one part of that concern into a concrete search policy. Given an observed signature, it checks whether available cases with that signature disagree in their trusted labels. If there is no observed collision, it does not launch expensive generic synthesis. If a collision demonstrates that the current representation is non-identifying, it can license expansion of the representation or search space.
 
-The useful result is narrow: **collision-gated search can avoid unnecessary expansion while preserving repair on observed conflicts**. The NSS implementation is an engineering benchmark, not evidence for a unique “negative-space” capability. Its headline candidate-count saving is bookkeeping rather than a full executed-compute comparison, and “no observed collision” does not prove universal adequacy under noise, hidden context, or distribution shift.
+The useful result is narrow: **collision-gated search can avoid unnecessary expansion while preserving repair on observed conflicts**. The NSS implementation is an engineering benchmark, not evidence for a unique “negative-space” capability. Its headline candidate-evaluation saving is a benchmark search-cost proxy rather than a full wall-clock or total-compute comparison, and “no observed collision” does not prove universal adequacy under noise, hidden context, or distribution shift.
 
 NSS therefore supplies a disciplined trigger for representation repair; it does not decide truth or authority by itself.
 
