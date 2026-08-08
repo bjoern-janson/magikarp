@@ -12,7 +12,7 @@ Before making project changes, read:
 4. [`EVIDENCE-RUN-PROTOCOL-v0.1.md`](EVIDENCE-RUN-PROTOCOL-v0.1.md)
 5. [`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md)
 
-`CODEX_HANDOFF.md` now routes to the current continuation package. The original first-implementation brief is archived.
+The completed first-implementation Codex brief is preserved at [`archive/CODEX_HANDOFF_INITIAL.md`](archive/CODEX_HANDOFF_INITIAL.md) for historical context only.
 
 ## Current project boundary
 
