@@ -1,145 +1,31 @@
-# Codex Handoff — MAGIKARP v0.1
+# Codex Handoff — Current Entry Point
 
-## Goal
+The original MAGIKARP v0.1 implementation handoff has been completed and is preserved at [`archive/CODEX_HANDOFF_INITIAL.md`](archive/CODEX_HANDOFF_INITIAL.md).
 
-Build the smallest benchmark capable of falsifying the claim:
+Do **not** treat the old first-benchmark build brief as the current task.
 
-> Pre-adaptation representation self-diagnosis adds held-out predictive information about later adaptation beyond current competence, ordinary error sensitivity, and standard adaptation metrics.
+## Current project state
 
-Do not implement the entire conceptual framework.
+Start with:
 
-Before an evidence-bearing run, follow [`docs/V0_1_EXECUTION_PREFLIGHT.md`](docs/V0_1_EXECUTION_PREFLIGHT.md). It freezes the remaining execution choices, validity gates, revision-trace requirements, and result-status vocabulary without changing the v0.1 hypothesis.
+1. [`PROJECT_FREEZE.md`](PROJECT_FREEZE.md)
+2. [`CONTINUATION.md`](CONTINUATION.md)
+3. [`EVIDENCE-RUN-PROTOCOL-v0.1.md`](EVIDENCE-RUN-PROTOCOL-v0.1.md)
 
-## First implementation target
+The built-in deterministic benchmark is an engineering reference only. It is fixed at `L0` and cannot produce scientific evidence.
 
-Create a synthetic task family with three controlled failure depths:
+## Current task boundary
 
-1. **Parameter failure** — existing variables and structure are sufficient; one local parameter/value becomes wrong.
-2. **Model failure** — variables remain observable, but the causal/transition relationship becomes wrong.
-3. **Interface failure** — a previously collapsed distinction becomes necessary; solving the task requires changing the representation or observation interface.
+The next scientific step is to obtain a genuinely independent `L2` or `L3` evidence source.
 
-The experimenter must know ground-truth `F`.
+Do not:
 
-## Suggested minimal agent families
+- expand the conceptual framework;
+- polish or generalize the built-in generator without a concrete evidence-source need;
+- implement representation invention or CRE in v0.1;
+- build a generic generator plugin system in anticipation of unknown sources;
+- tune the frozen benchmark around observed outcomes.
 
-Use deliberately simple agents before LLMs or large neural systems:
+Once an independent source is frozen, implement only the minimum source-specific execution adapter required to preserve the existing v0.1 measurement, validity, provenance, and claim boundaries.
 
-- **Rigid/local updater** — prefers parameter changes and under-escalates.
-- **Hyperplastic updater** — escalates too readily to model/interface changes.
-- **Depth-aware updater** — can select among parameter/model/interface revisions.
-- Optional: matched random or heuristic controls.
-
-The first result should come from a setting where the causal structure is transparent enough to debug.
-
-## Experimental phases
-
-### Phase A — Baseline
-Train/evaluate agents until current competence `Q` is matched as closely as practical.
-
-### Phase B — Diagnostic probes
-Expose agents to controlled evidence of parameter/model/interface failures.
-
-Do **not** permit unrestricted recovery.
-
-Record a diagnostic distribution such as:
-
-```text
-P(parameter), P(model), P(interface)
-```
-
-Use these data to compute `SD`.
-
-### Phase C — Held-out perturbation
-Introduce new perturbations from held-out instances or preferably held-out failure families.
-
-Now allow adaptation.
-
-### Phase D — Outcome trajectory
-Record:
-
-- recovery,
-- transfer,
-- retention,
-- preservation,
-- revision cost.
-
-Also preserve the complete revision trace so diagnostic quality, revision selection, and execution success remain separable.
-
-## Required comparisons
-
-Baseline predictor:
-
-```text
-M0: Y ~ Q + A + E
-```
-
-Expanded predictor:
-
-```text
-M1: Y ~ Q + A + E + SD
-```
-
-Evaluate out of sample.
-
-Start with straightforward predictive models and cross-validation before information-theoretic estimation.
-
-## Guardrails
-
-- Diagnostic and adaptation tasks must be generated independently enough to prevent benchmark recognition.
-- Keep raw diagnostic outputs.
-- Keep raw adaptation trajectories.
-- Separate measurement code from agent adaptation code.
-- Record seeds and config hashes.
-- Preserve negative results.
-- Do not collapse outcomes into one score prematurely.
-- Do not use future outcome information to tune the SD definition.
-- Do not interpret a result until the execution-preflight validity gates pass.
-
-## Minimal repo structure Codex can create
-
-```text
-src/magikarp/
-  envs/
-  agents/
-  diagnostics/
-  metrics/
-  analysis/
-tests/
-configs/
-scripts/
-results/        # ignored except compact summaries
-```
-
-Prefer a simple Python stack unless another language offers a clear experimental advantage.
-
-## Definition of done for first bench
-
-A single command should:
-
-1. generate deterministic train/diagnostic/held-out splits,
-2. run all agent families,
-3. compute `Q`, `E`, baseline adaptation measures, and pre-adaptation `SD`,
-4. run held-out adaptation trials,
-5. emit decomposed `Y_adapt`,
-6. preserve revision traces and selected revision depth,
-7. fit/evaluate `M0` and `M1`,
-8. report held-out predictive delta with uncertainty,
-9. save configs and raw-enough artifacts to reproduce the result,
-10. emit the benchmark-validity gates and one explicit run status.
-
-## What not to do yet
-
-- Do not build a universal JT score.
-- Do not implement the seven-sins analogy.
-- Do not implement music taxonomy.
-- Do not claim causation.
-- Do not implement CARP as the first experimental manipulation.
-- Do not optimize for a publishable benchmark before proving the signal exists.
-- Do not introduce large models until the toy environment is understood.
-
-## Next scientific decision
-
-After the first result:
-
-- If `M1 <= M0` out of sample: contract or redefine only if a specific measurement failure is demonstrated.
-- If `M1 > M0` reproducibly: strengthen holdouts, test revision efficiency, then consider causal interventions.
+Independent generator authors should use [`docs/INDEPENDENT_GENERATOR_BRIEF-v0.1.md`](docs/INDEPENDENT_GENERATOR_BRIEF-v0.1.md) without inspecting implementation internals if they are intended to preserve a plausible `L2` independence claim.
